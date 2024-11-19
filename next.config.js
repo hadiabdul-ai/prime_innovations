@@ -4,7 +4,12 @@ const withMDX = require("@next/mdx")();
 const nextConfig = {
   // Configure `pageExtensions` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  // Optionally, add any other Next.js config below
+  
+  
+  // Set the base path to match your repository name
+  basePath: '/prime_innovations', // Replace <repository-name> with your repo name
+  
+  // Optionally, add other Next.js config
 };
 
 module.exports = withMDX(nextConfig);

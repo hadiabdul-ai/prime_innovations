@@ -1,24 +1,11 @@
 'use client'
 
 import React, { useState, useEffect } from "react";
-import { BackgroundLines } from "@/components/background-lines";
-import { SparklesCore } from "@/components/ui/sparkles";
-import Hero from '@/components/hero'
-import { motion } from "framer-motion";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";  
-import { ButtonsCard } from "@/components/ui/tailwindcss-buttons";
+
 import Clients from '@/components/clients'
-import Features from '@/components/features'
-import Features02 from '@/components/features-02'
-import Features03 from '@/components/features-03'
-import TestimonialsCarousel from '@/components/testimonials-carousel'
-import Features04 from '@/components/features-04'
-import Pricing from './pricing-section'
-import Testimonials from '@/components/testimonials'
-import Cta from '@/components/cta'
+
 import CustomersList from './customers/customers-list'
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { WobbleCard } from "@/components/ui/wobble-card";
