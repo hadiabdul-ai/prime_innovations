@@ -1,4 +1,4 @@
-import './css/style.css'
+import '@/app/css/style.css'
 
 import { Inter } from 'next/font/google'
 
