@@ -2,17 +2,13 @@ const withMDX = require("@next/mdx")();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  
-  // Add support for static export
-  output: 'export',
-  
-  // Set the base path to match your repository name
-  basePath: '/prime_innovations', // Replace <repository-name> with your repo name
-  
+  output: 'export',  // Enable static exports
+  basePath: '/prime_innovations', // Your repo name
   assetPrefix: '/prime_innovations/',
-  // Optionally, add other Next.js config
+  images: {
+    unoptimized: true, // Required for static export
+  }
 };
 
 module.exports = withMDX(nextConfig);
