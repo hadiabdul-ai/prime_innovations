@@ -134,7 +134,7 @@ export default function Home() {
     <>
       {/* <Hero /> */}
       <BackgroundGradientAnimation containerClassName="h-[100vh] relative">
-        <div className="absolute z-20 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-28">
+        <div className="absolute z-20 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-28" data-aos="fade-up">
           <div className="transition duration-250 ease-in-out bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/95 to-white/10 font-montserrat flex flex-col items-center">
             <span className="text-sm lg:text-md text-gray-300 mb-6 flex items-center gap-2">
               <IconHeartHandshake className="w-4 h-4" />
