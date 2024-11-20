@@ -11,6 +11,15 @@ const inter = Inter({
 export const metadata = {
   title: 'Prime Innovations',
   description: 'Turning your ideas into reality',
+  openGraph: {
+    title: 'Prime Innovations',
+    description: 'Turning your ideas into reality',
+    images: [{
+      url: '/images/logo.png',
+      width: 600,
+      height: 330,
+    }],
+  },
 }
 
 export default function RootLayout({
@@ -24,7 +33,6 @@ export default function RootLayout({
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Prime Innovations" />
         <meta property="og:description" content="Turning your ideas into reality" />
-        <meta property="og:image" content="https://www.primeinnovations.ca/images/logo.png" />
         <meta property="og:url" content="https://www.primeinnovations.ca/" />
         <meta property="og:type" content="website" />
 
