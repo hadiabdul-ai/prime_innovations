@@ -134,7 +134,7 @@ export default function Home() {
     <>
       {/* <Hero /> */}
       <BackgroundGradientAnimation containerClassName="h-[100vh] relative">
-        <div className="absolute z-20 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-28" data-aos="fade-up">
+        <div className="absolute z-20 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-28" >
           <div className="transition duration-250 ease-in-out bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/95 to-white/10 font-montserrat flex flex-col items-center">
             <span className="text-sm lg:text-md text-gray-300 mb-6 flex items-center gap-2">
               <IconHeartHandshake className="w-4 h-4" />
@@ -225,7 +225,7 @@ export default function Home() {
 
 
       {/* Testimonials */}
-      <div id="testimonials" className="h-[30rem] rounded-md flex flex-col antialiased bg-black dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <div id="testimonials" className="h-[30rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden" data-aos="fade-up">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200">What our clients say</h1>
         <InfiniteMovingCards
           items={testimonials}
@@ -235,7 +235,7 @@ export default function Home() {
       </div>
 
       {/* projects */}
-      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-2 bg-black" data-aos="fade-up">
+      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-2 " data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
           <CustomersList />
@@ -246,7 +246,7 @@ export default function Home() {
       <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl" data-aos="fade-up">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
         <a href="tel:2046983137" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
+          <div className="p-4 md:p-6 shadow-input transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -262,7 +262,7 @@ export default function Home() {
         </a>
 
         <a href="mailto:hadi@primeinnovations.ca" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
+          <div className="p-4 md:p-6 shadow-input transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
         </a>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-700 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input border border-gray-700 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -293,7 +293,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-700 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input border border-gray-700 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
