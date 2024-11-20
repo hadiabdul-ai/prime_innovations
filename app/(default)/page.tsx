@@ -156,7 +156,7 @@ export default function Home() {
             </div>        
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 z-50 md:bottom-0 bottom-[20%]">
+        <div className="absolute bottom-0 left-0 right-0 z-50 md:bottom-0 bottom-[7%]">
           <div className="text-center mb-4 text-gray-500 text-sm translate-y-8">Powered by</div>
           <Clients />
         </div>
