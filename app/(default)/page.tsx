@@ -169,11 +169,11 @@ export default function Home() {
           className=""
         >
           <div className="max-w-xs">
-            <h2 className="text-left text-balance text-2xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h2 className="text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
               Web Applications & Dashboards
             </h2>
             <p className="mt-4 text-left  text-base/6 text-neutral-200">
-              We build modern web apps and dashboards that combine beautiful design with powerful features to drive business success.
+              We build modern web apps, ecommerce stores, and dashboards that combine beautiful design with powerful features to drive business success.
             </p>
           </div>
           <Image
@@ -186,7 +186,7 @@ export default function Home() {
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-          <h2 className="max-w-80 text-left text-balance text-2xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="max-w-80 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
             AI Solutions
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
@@ -195,7 +195,7 @@ export default function Home() {
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-yellow-900">
-          <h2 className="max-w-80 text-left text-balance text-2xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="max-w-80 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
             Chatbots
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
@@ -205,7 +205,7 @@ export default function Home() {
 
         <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
           <div className="max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg text-left text-balance text-2xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h2 className="max-w-sm md:max-w-lg text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
               Mobile Applications
             </h2>
             <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
@@ -217,18 +217,9 @@ export default function Home() {
             width={290}
             height={500}
             alt="linear demo image"
-            className="absolute -right-10 lg:-right-[0%] filter -bottom-80 object-contain rounded-xl"
+            className="absolute -right-10 lg:-right-[0%] filter -bottom-70 lg:-bottom-80 object-contain rounded-xl"
           />
         </WobbleCard>
-      </div>
-
-
-      {/* projects */}
-      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
-          <CustomersList />
-        </div>
       </div>
 
 
@@ -240,6 +231,14 @@ export default function Home() {
           direction="right"
           speed="slow"
         />
+      </div>
+
+      {/* projects */}
+      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
+          <CustomersList />
+        </div>
       </div>
 
       {/* Contact Us */}
