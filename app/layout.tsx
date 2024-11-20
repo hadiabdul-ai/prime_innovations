@@ -24,12 +24,12 @@ export default function RootLayout({
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Prime Innovations" />
         <meta property="og:description" content="Turning your ideas into reality" />
-        <meta property="og:image" content="https://www.primeinnovations.ca/images/logo.svg" />
+        <meta property="og:image" content="https://www.primeinnovations.ca/images/logo.png" />
         <meta property="og:url" content="https://www.primeinnovations.ca/" />
         <meta property="og:type" content="website" />
 
         {/* Apple Meta Tags */}
-        <link rel="apple-touch-icon" href="https://www.primeinnovations.ca/images/logo.svg" />
+        <link rel="apple-touch-icon" href="https://www.primeinnovations.ca/images/logo.png" />
         <meta name="apple-mobile-web-app-title" content="Prime Innovations" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
