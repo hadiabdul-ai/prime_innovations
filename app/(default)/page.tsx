@@ -146,14 +146,14 @@ export default function Home() {
               <div className="inline-flex">
                 <button 
                   onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })}
-                  className="btn-sm mt-6 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow"
+                  className="btn-sm mt-6 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
                 >
                   <span className="relative py-3 px-5 inline-flex text-lg items-center">
                     Contact Us &nbsp;<span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"> -&gt;</span>
                   </span>
                 </button>
               </div>
-            </div>        
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-50 md:bottom-0 bottom-[7%]">
@@ -245,7 +245,7 @@ export default function Home() {
       {/* Contact Us */}
       <div id="contact-us" className="grid grid-cols-1 p-5 bg-black lg:grid-cols-4 gap-4 mx-auto w-full">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
-        <a href="tel:2046983137" className="block border border-gray-800 hover:border-gray-700 hover:scale-[1.02] rounded-2xl overflow-hidden">
+        <a href="tel:2046983137" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
           <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -261,7 +261,7 @@ export default function Home() {
           </div>
         </a>
 
-        <a href="mailto:hadi@primeinnovations.ca" className="block border border-gray-800 hover:border-gray-700 hover:scale-[1.02] rounded-2xl overflow-hidden">
+        <a href="mailto:hadi@primeinnovations.ca" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
           <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
         </a>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-800 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-700 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -293,7 +293,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-800 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-700 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
