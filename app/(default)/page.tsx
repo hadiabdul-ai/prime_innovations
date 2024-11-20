@@ -243,7 +243,7 @@ export default function Home() {
       </div>
 
       {/* Contact Us */}
-      <div id="contact-us" className="grid grid-cols-1 p-5 bg-black lg:grid-cols-4 gap-4 mx-auto w-full">
+      <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
         <a href="tel:2046983137" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
           <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
