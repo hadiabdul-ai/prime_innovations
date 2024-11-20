@@ -2,6 +2,11 @@
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 
+const getAdjustedColor = (color: string, isSafari: boolean) => {
+  if (!isSafari) return color;
+  return color.split(",").map(val => Math.min(255, parseInt(val) * 1.15)).join(",");
+};
+
 export const BackgroundGradientAnimation = ({
   gradientBackgroundStart = "rgb(0, 0, 0)", // Black
   gradientBackgroundEnd = "rgb(0, 0, 0)", // Black
@@ -39,6 +44,11 @@ export const BackgroundGradientAnimation = ({
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
+  const [isSafari, setIsSafari] = useState(false);
+  useEffect(() => {
+    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
+  }, []);
+
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -48,15 +58,15 @@ export const BackgroundGradientAnimation = ({
       "--gradient-background-end",
       gradientBackgroundEnd
     );
-    document.body.style.setProperty("--first-color", firstColor);
-    document.body.style.setProperty("--second-color", secondColor);
-    document.body.style.setProperty("--third-color", thirdColor);
-    document.body.style.setProperty("--fourth-color", fourthColor);
-    document.body.style.setProperty("--fifth-color", fifthColor);
+    document.body.style.setProperty("--first-color", getAdjustedColor(firstColor, isSafari));
+    document.body.style.setProperty("--second-color", getAdjustedColor(secondColor, isSafari));
+    document.body.style.setProperty("--third-color", getAdjustedColor(thirdColor, isSafari));
+    document.body.style.setProperty("--fourth-color", getAdjustedColor(fourthColor, isSafari));
+    document.body.style.setProperty("--fifth-color", getAdjustedColor(fifthColor, isSafari));
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [isSafari]);
 
   useEffect(() => {
     function move() {
@@ -80,11 +90,6 @@ export const BackgroundGradientAnimation = ({
       setTgY(event.clientY - rect.top);
     }
   };
-
-  const [isSafari, setIsSafari] = useState(false);
-  useEffect(() => {
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-  }, []);
 
   return (
     <div
@@ -115,7 +120,7 @@ export const BackgroundGradientAnimation = ({
       <div
         className={cn(
           "gradients-container h-full w-full blur-lg",
-          isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
+          isSafari ? "blur-xl opacity-[0.85]" : "[filter:url(#blurMe)_blur(40px)]"
         )}
       >
         <div
@@ -124,7 +129,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:center_center]`,
             `animate-first`,
-            `opacity-70`
+            isSafari ? "opacity-100" : "opacity-90"
           )}
         ></div>
         <div
@@ -133,7 +138,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%-400px)]`,
             `animate-second`,
-            `opacity-70`
+            isSafari ? "opacity-100" : "opacity-90"
           )}
         ></div>
         <div
@@ -142,7 +147,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%+400px)]`,
             `animate-third`,
-            `opacity-70`
+            isSafari ? "opacity-100" : "opacity-90"
           )}
         ></div>
         <div
@@ -151,7 +156,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%-200px)]`,
             `animate-fourth`,
-            `opacity-70`
+            isSafari ? "opacity-100" : "opacity-90"
           )}
         ></div>
         <div
@@ -160,7 +165,7 @@ export const BackgroundGradientAnimation = ({
             `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
             `[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
             `animate-fifth`,
-            `opacity-70`
+            isSafari ? "opacity-100" : "opacity-90"
           )}
         ></div>
 

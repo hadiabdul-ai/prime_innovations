@@ -133,9 +133,9 @@ export default function Home() {
     <>
       {/* <Hero /> */}
       <BackgroundGradientAnimation containerClassName="h-[100vh] relative">
-        <div className="absolute z-40 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-20">
+        <div className="absolute z-40 inset-0 flex items-center justify-center text-white px-4 pointer-events-none text-center -mt-32">
           <div className="transition duration-250 ease-in-out bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/95 to-white/30 font-montserrat flex flex-col items-center">
-            <span className="text-md text-gray-300 mb-4 flex items-center gap-2">
+            <span className="text-md text-gray-300 mb-6 flex items-center gap-2">
               <IconHeartHandshake className="w-4 h-4" />
               10% of our profits go towards a charity of your choice.
             </span>
@@ -143,13 +143,13 @@ export default function Home() {
             <span className="text-5xl md:text-6xl text-blue-500">INNOVATIONS</span>
             <span className="text-2xl text-gray-300 font-light mt-8">Turning your ideas into reality.</span>
             <div className="mt-6" data-aos="fade-down">
-              <div className="inline-flex relative before:absolute before:bg-gray-800 before:blur-md before:inset-0">
+              <div className="inline-flex">
                 <button 
                   onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })}
-                  className="btn-sm py-2 px-5 text-slate-300 hover:text-white transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow"
+                  className="btn-sm mt-6 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full before:pointer-events-none shadow"
                 >
-                  <span className="relative inline-flex text-lg items-center">
-                    Contact Us  <span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"> -&gt;</span>
+                  <span className="relative py-3 px-5 inline-flex text-lg items-center">
+                    Contact Us &nbsp;<span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"> -&gt;</span>
                   </span>
                 </button>
               </div>
@@ -225,14 +225,16 @@ export default function Home() {
 
       {/* projects */}
       <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black">
-        <h1 className="text-center text-4xl mb-8 font-bold text-gray-800 dark:text-gray-200">Projects</h1>
-        <CustomersList />
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
+          <CustomersList />
+        </div>
       </div>
 
 
       {/* Testimonials */}
-      <div id="testimonials" className="h-[30rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-        <h1 className="text-center text-4xl mb-6 font-bold text-gray-800 dark:text-gray-200">What our clients say</h1>
+      <div id="testimonials" className="h-[30rem] rounded-md flex flex-col antialiased bg-black dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <h1 className="text-center text-4xl mb-6 font-bold text-gray-200">What our clients say</h1>
         <InfiniteMovingCards
           items={testimonials}
           direction="right"
@@ -242,14 +244,14 @@ export default function Home() {
 
       {/* Contact Us */}
       <div id="contact-us" className="grid grid-cols-1 p-5 bg-black lg:grid-cols-4 gap-4 mx-auto w-full">
-        <h1 className="text-center text-4xl mb-6 font-bold text-gray-800 dark:text-gray-200 lg:col-span-4">Contact Us</h1>
+        <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
         <a href="tel:2046983137" className="block border border-gray-800 hover:border-gray-700 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input bg-white dark:bg-black transition-transform cursor-pointer">
+          <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <h3 className="font-bold text-lg text-neutral-800 dark:text-neutral-200">
+              <h3 className="font-bold text-lg text-neutral-200">
                 Call Us
               </h3>
             </div>
@@ -260,12 +262,12 @@ export default function Home() {
         </a>
 
         <a href="mailto:hadi@primeinnovations.ca" className="block border border-gray-800 hover:border-gray-700 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input bg-white dark:bg-black transition-transform cursor-pointer">
+          <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <h3 className="font-bold text-lg text-neutral-800 dark:text-neutral-200">
+              <h3 className="font-bold text-lg text-neutral-200">
                 Email Us
               </h3>
             </div>
@@ -275,33 +277,33 @@ export default function Home() {
           </div>
         </a>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-white dark:bg-black border border-gray-800 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-800 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <h3 className="font-bold text-lg text-neutral-800 dark:text-neutral-200">
+            <h3 className="font-bold text-lg text-neutral-200">
               Winnipeg Office
             </h3>
           </div>
-          <p className="text-neutral-600 text-sm mt-2 dark:text-neutral-300">
+          <p className="text-sm mt-2 text-neutral-300">
             110 Innovation Drive<br />
             Winnipeg, MB R3T 2M1
           </p>
         </div>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-white dark:bg-black border border-gray-800 transition-transform cursor-pointer">
+        <div className="rounded-2xl p-4 md:p-6 shadow-input bg-black border border-gray-800 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">
             <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <h3 className="font-bold text-lg text-neutral-800 dark:text-neutral-200">
+            <h3 className="font-bold text-lg text-neutral-200">
               Los Angeles Office (Coming Soon)
             </h3>
           </div>
-          <p className="text-neutral-600 text-sm mt-2 dark:text-neutral-300">
+          <p className="text-sm mt-2 text-neutral-300">
             456 Hollywood Blvd<br />
             Los Angeles, CA 90028
           </p>
