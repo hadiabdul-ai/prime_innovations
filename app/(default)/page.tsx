@@ -235,7 +235,7 @@ export default function Home() {
       </div>
 
       {/* projects */}
-      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black" data-aos="fade-up">
+      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-2 bg-black" data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
           <CustomersList />
