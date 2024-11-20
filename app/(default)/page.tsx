@@ -164,7 +164,7 @@ export default function Home() {
       </BackgroundGradientAnimation>
       
       {/* Services */}
-      <div id="services" className="grid grid-cols-1 px-2 py-4 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <div id="services" className="grid grid-cols-1 px-2 py-4 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full" data-aos="fade-up">
         <WobbleCard
           containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
           className=""
@@ -235,7 +235,7 @@ export default function Home() {
       </div>
 
       {/* projects */}
-      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black">
+      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-10 bg-black" data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
           <CustomersList />
@@ -243,7 +243,7 @@ export default function Home() {
       </div>
 
       {/* Contact Us */}
-      <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl">
+      <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl" data-aos="fade-up">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
         <a href="tel:2046983137" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
           <div className="p-4 md:p-6 shadow-input bg-black transition-transform cursor-pointer">
