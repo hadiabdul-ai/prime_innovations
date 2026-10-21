@@ -106,6 +106,24 @@ Company / website:
 Phone (optional):
 `);
 
+const CopyButton = ({ text }: { text: string }) => {
+  const [copied, setCopied] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        navigator.clipboard?.writeText(text).then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 1500);
+        });
+      }}
+      className="text-xs rounded-full border border-gray-700 hover:border-gray-500 px-2 py-0.5 text-gray-400 hover:text-white transition"
+    >
+      {copied ? "Copied" : "Copy"}
+    </button>
+  );
+};
+
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -168,24 +186,27 @@ export default function Home() {
             </span>
             <span className="text-8xl md:text-9xl">PRIME</span>
             <span className="text-5xl md:text-6xl text-blue-500">INNOVATIONS</span>
-            <span className="text-2xl text-gray-300 font-light mt-8">Turning your ideas into reality.</span>
-            <span className="text-lg text-gray-300 mt-10">Get a free AI evaluation of your business.</span>
+            <span className="text-2xl text-gray-300 font-light mt-8">Get a free AI evaluation of your business.</span>
             <div data-aos="fade-down">
               <div className="inline-flex">
                 <a
                   href={evaluationMailto}
-                  className="btn-sm mt-4 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
+                  className="btn-sm mt-8 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
                 >
                   <span className="relative py-3 px-5 inline-flex text-lg items-center">
-                    Contact Us &nbsp;<span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"> -&gt;</span>
+                    Contact Us
                   </span>
                 </a>
+              </div>
+              <div className="mt-3 flex items-center justify-center gap-2 pointer-events-auto">
+                <span className="text-sm text-gray-300 select-all cursor-text">hadi@primeinnovationshq.com</span>
+                <CopyButton text="hadi@primeinnovationshq.com" />
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 z-50 md:bottom-0 bottom-[7%]">
-          <div className="text-center mb-4 text-gray-500 text-sm translate-y-8">Powered by</div>
+        <div className="absolute bottom-0 left-0 right-0 z-50">
+          <div className="text-center text-gray-500 text-sm">Powered by</div>
           <Clients />
         </div>
       </BackgroundGradientAnimation>
@@ -261,37 +282,34 @@ export default function Home() {
       {/* Contact Us */}
       <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl" data-aos="fade-up">
         <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
-        <a href="tel:2046983137" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input transition-transform cursor-pointer">
-            <div className="flex items-center gap-3">
+        <div className="border border-gray-700 hover:border-gray-600 rounded-2xl p-4 md:p-6 shadow-input transition">
+          <a href="tel:2046983137" className="flex items-center gap-3 group w-fit">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <h3 className="font-bold text-lg text-neutral-200">
+              <h3 className="font-bold text-lg text-neutral-200 group-hover:text-white">
                 Call Us
               </h3>
-            </div>
-            <span className="text-sm mt-2 block">
-              (204) 698-3137
-            </span>
-          </div>
-        </a>
+          </a>
+          <span className="text-sm mt-2 block select-text cursor-text">
+            (204) 698-3137
+          </span>
+        </div>
 
-        <a href={evaluationMailto} className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
-          <div className="p-4 md:p-6 shadow-input transition-transform cursor-pointer">
-            <div className="flex items-center gap-3">
+        <div className="border border-gray-700 hover:border-gray-600 rounded-2xl p-4 md:p-6 shadow-input transition">
+          <a href={evaluationMailto} className="flex items-center gap-3 group w-fit">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <h3 className="font-bold text-lg text-neutral-200">
+              <h3 className="font-bold text-lg text-neutral-200 group-hover:text-white">
                 Email Us
               </h3>
-            </div>
-            <span className="text-sm mt-2 block">
-              hadi@primeinnovationshq.com
-            </span>
+          </a>
+          <div className="mt-2 flex items-center gap-2">
+            <span className="text-sm select-all cursor-text">hadi@primeinnovationshq.com</span>
+            <CopyButton text="hadi@primeinnovationshq.com" />
           </div>
-        </a>
+        </div>
 
         <div className="rounded-2xl p-4 md:p-6 shadow-input border border-gray-700 transition-transform cursor-pointer">
           <div className="flex items-center gap-3">

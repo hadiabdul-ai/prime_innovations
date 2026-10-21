@@ -25,7 +25,7 @@ export default function Clients() {
   return (
     <section>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-16">
+        <div className="pt-4 pb-6 md:pb-8">
           <div className="overflow-hidden">
             <div className="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
