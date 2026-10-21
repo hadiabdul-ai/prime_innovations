@@ -28,6 +28,10 @@ import {
   IconRouteAltLeft,
   IconTerminal2,
   IconHeartHandshake,
+  IconLayoutDashboard,
+  IconRobot,
+  IconMessageChatbot,
+  IconMicrophone,
 } from "@tabler/icons-react";
 
 
@@ -188,61 +192,60 @@ export default function Home() {
       
       {/* Services */}
       <div id="services" className="grid grid-cols-1 px-2 py-4 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full" data-aos="fade-up">
-        <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
-          className=""
-        >
-          <div className="max-w-xs">
-            <h2 className="text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2 min-h-[300px] bg-pink-800">
+          <div className="max-w-lg">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+              <IconLayoutDashboard className="h-6 w-6" stroke={1.75} />
+            </span>
+            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
               Web Applications & Dashboards
             </h2>
-            <p className="mt-4 text-left  text-base/6 text-neutral-200">
+            <p className="mt-4 text-left text-base/6 text-neutral-200">
               We build modern web apps, ecommerce stores, and dashboards that combine beautiful design with powerful features to drive business success.
             </p>
           </div>
-          <Image
-            src="/images/websites.png"
-            width={500}
-            height={500}
-            alt="linear demo image"
-            className="absolute -right-4 lg:-right-[10%] filter -bottom-1 object-contain rounded-xl"
-          />
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-          <h2 className="max-w-80 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
-            AI Solutions
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            We build custom ML/LLM solutions and chatbots powered by cutting-edge AI to automate workflows and enhance customer engagement.
-          </p>
+          <div className="max-w-lg">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+              <IconRobot className="h-6 w-6" stroke={1.75} />
+            </span>
+            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+              Agentic AI Solutions
+            </h2>
+            <p className="mt-4 text-left text-base/6 text-neutral-200">
+              AI agents that take on multi-step work for you. They read emails and documents, make decisions, and update your tools, handing off to your team when a human is needed.
+            </p>
+          </div>
         </WobbleCard>
 
         <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-yellow-900">
-          <h2 className="max-w-80 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
-            Chatbots
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            We build intelligent chatbots that engage your customers 24/7, handle support queries, and drive conversions through natural conversations and personalized interactions.
-          </p>
-        </WobbleCard>
-
-        <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-          <div className="max-w-sm">
-            <h2 className="max-w-sm md:max-w-lg text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
-              Mobile Applications
+          <div className="max-w-lg">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+              <IconMessageChatbot className="h-6 w-6" stroke={1.75} />
+            </span>
+            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+              Chatbots
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-              We develop native and cross-platform mobile apps that deliver seamless user experiences across iOS and Android, helping businesses reach and engage their mobile audience effectively.
+            <p className="mt-4 text-left text-base/6 text-neutral-200">
+              Trained on your website, FAQs and documents, a chatbot answers customer questions 24/7, captures leads, and passes complex conversations to your team.
             </p>
           </div>
-          <Image
-            src="/images/mobile-app.png"
-            width={290}
-            height={500}
-            alt="linear demo image"
-            className="absolute -right-10 lg:-right-[0%] filter -bottom-70 lg:-bottom-80 object-contain rounded-xl"
-          />
+        </WobbleCard>
+
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2 min-h-[300px] bg-blue-900">
+          <div className="max-w-lg">
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+              <IconMicrophone className="h-6 w-6" stroke={1.75} />
+            </span>
+            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+              Voice Agents
+            </h2>
+            <p className="mt-4 text-left text-base/6 text-neutral-200">
+              AI phone agents that answer calls in a natural voice, any time of day. They handle questions, book appointments and take orders, then log every call and send a summary to your team.
+            </p>
+          </div>
         </WobbleCard>
       </div>
 
