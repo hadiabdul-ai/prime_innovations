@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Logo from './logo'
-import MobileMenu from './mobile-menu'
 import { ButtonsCard } from "@/components/ui/tailwindcss-buttons";
 
 export default function Header() {
@@ -14,23 +13,6 @@ export default function Header() {
             <Logo />
           </div> */}
 
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex md:grow">
-
-            {/* Desktop menu links */}
-            <ul className="flex grow justify-center flex-wrap items-center">
-              <li>
-                <Link className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#services">Services</Link>
-              </li>
-              <li>
-                <Link className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#testimonials">Testimonials</Link>
-              </li>
-              <li>
-                <Link className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out" href="#contact-us">Contact us</Link>
-              </li>
-            </ul>
-
-          </nav>
 
           {/* Desktop sign in links */}
           {/* <ul className="flex-1 flex justify-end items-center">
@@ -45,7 +27,6 @@ export default function Header() {
             </li>
           </ul> */}
 
-          <MobileMenu />
 
         </div>
       </div>

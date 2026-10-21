@@ -10,7 +10,7 @@ export default function Footer() {
           {/* 1st block */}
           <div className="col-span-12 flex justify-center items-center">
             <div className="mb-4 sm:mb-0">
-              <div className="text-sm text-slate-300 text-center">© Primeinnovations.ca <span className="text-slate-500">-</span> All rights reserved.</div>
+              <div className="text-sm text-slate-300 text-center">© Primeinnovationshq.com <span className="text-slate-500">-</span> All rights reserved.</div>
             </div>
           </div>
         </div>

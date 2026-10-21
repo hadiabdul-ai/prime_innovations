@@ -20,6 +20,7 @@ import CustomerImg09 from '@/public/images/customer-09.svg'
 import CustomerBg09 from '@/public/images/customer-bg-09.png'
 import CustomerImg10 from '@/public/images/customer-10.svg'
 import CustomerBg10 from '@/public/images/customer-bg-10.png'
+import HidayahLogo from '@/public/images/hidayah-logo.svg'
 import CustomerAvatar01 from '@/public/images/customer-avatar-01.jpg'
 import CustomerAvatar02 from '@/public/images/customer-avatar-02.jpg'
 import Particles from '@/components/particles'
@@ -39,6 +40,12 @@ export default function CustomersList() {
       img: CustomerImg01,
       bg: CustomerBg01,
       link: 'https://www.datebetter.online',
+    },
+    {
+      name: 'Hidayah',
+      img: HidayahLogo,
+      bg: CustomerBg03,
+      link: 'https://myhidayah.com',
     }
   ]
 

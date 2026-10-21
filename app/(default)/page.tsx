@@ -7,7 +7,6 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import Clients from '@/components/clients'
 
 import CustomersList from './customers/customers-list'
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -80,6 +79,29 @@ const features = [
   },
 ];
 
+const evaluationMailto =
+  "mailto:hadi@primeinnovationshq.com" +
+  "?subject=" + encodeURIComponent("Free AI Evaluation Request") +
+  "&body=" + encodeURIComponent(
+`Hi Prime Innovations,
+
+I'd like a free AI evaluation of my business.
+
+1. What does your business do, and who are your customers?
+
+2. How big is your team?
+
+3. Which AI tools, if any, are you using today (e.g. ChatGPT, Copilot)?
+
+4. What tasks take up the most time for you or your team?
+
+5. What would you most like AI to help with?
+
+Name:
+Company / website:
+Phone (optional):
+`);
+
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -143,16 +165,17 @@ export default function Home() {
             <span className="text-8xl md:text-9xl">PRIME</span>
             <span className="text-5xl md:text-6xl text-blue-500">INNOVATIONS</span>
             <span className="text-2xl text-gray-300 font-light mt-8">Turning your ideas into reality.</span>
-            <div className="mt-6" data-aos="fade-down">
+            <span className="text-lg text-gray-300 mt-10">Get a free AI evaluation of your business.</span>
+            <div data-aos="fade-down">
               <div className="inline-flex">
-                <button 
-                  onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })}
-                  className="btn-sm mt-6 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
+                <a
+                  href={evaluationMailto}
+                  className="btn-sm mt-4 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
                 >
                   <span className="relative py-3 px-5 inline-flex text-lg items-center">
                     Contact Us &nbsp;<span className="tracking-normal text-blue-500 group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1"> -&gt;</span>
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -224,16 +247,6 @@ export default function Home() {
       </div>
 
 
-      {/* Testimonials */}
-      <div id="testimonials" className="h-[30rem] rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden" data-aos="fade-up">
-        <h1 className="text-center text-4xl mb-6 font-bold text-gray-200">What our clients say</h1>
-        <InfiniteMovingCards
-          items={testimonials}
-          direction="right"
-          speed="slow"
-        />
-      </div>
-
       {/* projects */}
       <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-2 " data-aos="fade-up">
         <div className="max-w-7xl mx-auto">
@@ -261,7 +274,7 @@ export default function Home() {
           </div>
         </a>
 
-        <a href="mailto:hadi@primeinnovations.ca" className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
+        <a href={evaluationMailto} className="block border border-gray-700 hover:border-gray-600 hover:scale-[1.02] rounded-2xl overflow-hidden">
           <div className="p-4 md:p-6 shadow-input transition-transform cursor-pointer">
             <div className="flex items-center gap-3">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -272,7 +285,7 @@ export default function Home() {
               </h3>
             </div>
             <span className="text-sm mt-2 block">
-              hadi@primeinnovations.ca
+              hadi@primeinnovationshq.com
             </span>
           </div>
         </a>
@@ -422,31 +435,3 @@ const LabelInputContainer = ({
     </div>
   );
 };
-
-
-const testimonials = [
-  {
-    quote:
-      "Prime Innovations delivered a clean, modern website that perfectly fits our needs. The new design has significantly improved user engagement and conversion rates.",
-    name: "Sarah Chen",
-    title: "CEO, DateBetter",
-  },
-  {
-    quote:
-      "The custom CRM they built has streamlined our client management process. Their team was responsive and delivered exactly what we needed.",
-    name: "Michael Rodriguez", 
-    title: "Operations Director, C15 bulders",
-  },
-  {
-    quote:
-      "Their chatbot solution has helped us provide better customer support while reducing costs. Implementation was smooth and the results exceeded expectations.",
-    name: "David Thompson",
-    title: "CTO, TechFlow",
-  },
-  {
-    quote:
-      "The mobile app they developed is intuitive and reliable. Our customers love the seamless experience and we've seen great adoption rates.",
-    name: "Jennifer Walsh",
-    title: "Product Lead, SwiftServe",
-  }
-];
