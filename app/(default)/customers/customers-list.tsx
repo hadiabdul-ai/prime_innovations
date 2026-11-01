@@ -1,29 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import CustomerImg01 from '@/public/images/datebetter-logo.svg'
-import CustomerBg01 from '@/public/images/customer-bg-01.png'
-import CustomerImg02 from '@/public/images/Lumarep-logo.svg'
-import CustomerBg02 from '@/public/images/customer-bg-02.png'
-import CustomerImg03 from '@/public/images/lumarep-logo-2.svg'
-import CustomerBg03 from '@/public/images/customer-bg-03.png'
-import CustomerImg04 from '@/public/images/customer-04.svg'
-import CustomerBg04 from '@/public/images/customer-bg-04.png'
-import CustomerImg05 from '@/public/images/customer-05.svg'
-import CustomerBg05 from '@/public/images/customer-bg-05.png'
-import CustomerImg06 from '@/public/images/customer-06.svg'
-import CustomerBg06 from '@/public/images/customer-bg-06.png'
-import CustomerImg07 from '@/public/images/customer-07.svg'
-import CustomerBg07 from '@/public/images/customer-bg-07.png'
-import CustomerImg08 from '@/public/images/customer-08.svg'
-import CustomerBg08 from '@/public/images/customer-bg-08.png'
-import CustomerImg09 from '@/public/images/customer-09.svg'
-import CustomerBg09 from '@/public/images/customer-bg-09.png'
-import CustomerImg10 from '@/public/images/customer-10.svg'
-import CustomerBg10 from '@/public/images/customer-bg-10.png'
+import SportsHQShot from '@/public/images/projects/sportshq.jpg'
+import HidayahShot from '@/public/images/projects/hidayah.jpg'
+import AlamWaxBarShot from '@/public/images/projects/alam.jpg'
+import SportsHQLogo from '@/public/images/sportsheadquarters-logo.svg'
 import HidayahLogo from '@/public/images/hidayah-logo.svg'
 import AlamWaxBarLogo from '@/public/images/alamwaxbar-logo.svg'
-import CustomerAvatar01 from '@/public/images/customer-avatar-01.jpg'
-import CustomerAvatar02 from '@/public/images/customer-avatar-02.jpg'
 import Particles from '@/components/particles'
 import Highlighter, { HighlighterItem02 } from '@/components/highlighter'
 
@@ -31,27 +13,24 @@ export default function CustomersList() {
 
   const items = [
     {
-      name: 'Customer name',
-      img: CustomerImg02,
-      bg: CustomerBg02,
-      link: 'https://www.lumarep.ca',
-    },
-    {
-      name: 'Customer name',
-      img: CustomerImg01,
-      bg: CustomerBg01,
-      link: 'https://www.datebetter.online',
+      name: 'LOTW Sports Headquarters',
+      type: 'Ecommerce store',
+      img: SportsHQShot,
+      logo: SportsHQLogo,
+      link: 'https://sportsheadquarters.ca',
     },
     {
       name: 'Hidayah',
-      img: HidayahLogo,
-      bg: CustomerBg03,
+      type: 'Web app',
+      img: HidayahShot,
+      logo: HidayahLogo,
       link: 'https://myhidayah.com',
     },
     {
       name: 'Alam Wax Bar',
-      img: AlamWaxBarLogo,
-      bg: CustomerBg04,
+      type: 'Business website',
+      img: AlamWaxBarShot,
+      logo: AlamWaxBarLogo,
       link: 'https://alamwaxbar.com',
     }
   ]
@@ -68,8 +47,9 @@ export default function CustomersList() {
                 {/* Particles animation */}
                 <Particles className="absolute inset-0 -z-10" quantity={3} />
                 <div className="flex items-center justify-center">
-                  <Image className="w-full h-full aspect-video object-cover" src={item.bg} width={352} height={198} alt="Customer Background" aria-hidden="true" />
-                  <Image className="absolute" src={item.img} alt={item.name} />
+                  <Image className="w-full h-full aspect-video object-cover object-top opacity-[0.11] blur-[2px]" src={item.img} alt="" aria-hidden="true" placeholder="blur" />
+                  <Image className="absolute" src={item.logo} alt={item.name} />
+                  <span className="absolute bottom-5 text-sm text-gray-400">{item.type}</span>
                 </div>
               </div>
             </HighlighterItem02>

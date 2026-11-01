@@ -10,10 +10,10 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Prime Innovations',
-  description: 'Turning your ideas into reality',
+  description: 'Web apps, AI agents, chatbots and voice agents. Get a free evaluation of your business.',
   openGraph: {
     title: 'Prime Innovations',
-    description: 'Turning your ideas into reality',
+    description: 'Web apps, AI agents, chatbots and voice agents. Get a free evaluation of your business.',
     siteName: 'Prime Innovations',
     images: [{
       url: 'https://www.primeinnovationshq.com/images/logo.png',
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Prime Innovations',
-    description: 'Turning your ideas into reality',
+    description: 'Web apps, AI agents, chatbots and voice agents. Get a free evaluation of your business.',
     images: ['https://www.primeinnovationshq.com/images/logo.png'],
   },
 }
@@ -42,7 +42,7 @@ export default function RootLayout({
       <head>
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Prime Innovations" />
-        <meta property="og:description" content="Turning your ideas into reality" />
+        <meta property="og:description" content="Web apps, AI agents, chatbots and voice agents. Get a free evaluation of your business." />
         <meta property="og:url" content="https://www.primeinnovationshq.com/" />
         <meta property="og:type" content="website" />
 

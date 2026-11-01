@@ -32,8 +32,18 @@ import {
   IconRobot,
   IconMessageChatbot,
   IconMicrophone,
+  IconPhone,
+  IconMail,
+  IconMapPin,
 } from "@tabler/icons-react";
 
+
+const contactCard = "rounded-2xl border border-white/10 bg-white/[0.03] p-5 md:p-6 transition hover:border-white/20 hover:bg-white/[0.05]";
+const contactIcon = "flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-gray-200 ring-1 ring-white/10";
+
+const SectionHeading = ({ title }: { title: string }) => (
+  <h2 className="mb-10 text-center text-3xl md:text-4xl font-bold text-gray-100">{title}</h2>
+);
 
 const features = [
   {
@@ -85,11 +95,11 @@ const features = [
 
 const evaluationMailto =
   "mailto:hadi@primeinnovationshq.com" +
-  "?subject=" + encodeURIComponent("Free AI Evaluation Request") +
+  "?subject=" + encodeURIComponent("Free Business Evaluation Request") +
   "&body=" + encodeURIComponent(
 `Hi Prime Innovations,
 
-I'd like a free AI evaluation of my business.
+I'd like a free evaluation of my business.
 
 1. What does your business do, and who are your customers?
 
@@ -186,16 +196,14 @@ export default function Home() {
             </span>
             <span className="text-8xl md:text-9xl">PRIME</span>
             <span className="text-5xl md:text-6xl text-blue-500">INNOVATIONS</span>
-            <span className="text-2xl text-gray-300 font-light mt-8">Get a free AI evaluation of your business.</span>
+            <span className="text-2xl text-gray-300 font-light mt-8">Get a free evaluation of your business.</span>
             <div data-aos="fade-down">
               <div className="inline-flex">
                 <a
                   href={evaluationMailto}
-                  className="btn-sm mt-8 text-slate-300 hover:text-white hover:bg-gray-900 transition duration-150 ease-in-out group bg-transparent relative before:absolute before:inset-0 before:bg-slate-800/50 before:rounded-full shadow cursor-pointer pointer-events-auto"
+                  className="mt-8 inline-flex items-center rounded-full bg-blue-600 px-7 py-3 text-base font-medium text-white shadow-lg shadow-blue-600/30 ring-1 ring-white/10 transition duration-150 ease-in-out hover:bg-blue-500 hover:shadow-blue-500/50 pointer-events-auto"
                 >
-                  <span className="relative py-3 px-5 inline-flex text-lg items-center">
-                    Contact Us
-                  </span>
+                  Contact Us
                 </a>
               </div>
               <div className="mt-3 flex items-center justify-center gap-2 pointer-events-auto">
@@ -206,138 +214,114 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-50">
-          <div className="text-center text-gray-500 text-sm">Powered by</div>
           <Clients />
         </div>
       </BackgroundGradientAnimation>
       
       {/* Services */}
-      <div id="services" className="grid grid-cols-1 px-2 py-4 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full" data-aos="fade-up">
-        <WobbleCard containerClassName="col-span-1 lg:col-span-2 min-h-[300px] bg-pink-800">
+      <div id="services" className="px-5 pt-24 max-w-7xl mx-auto w-full" data-aos="fade-up">
+        <SectionHeading title="Services" />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-pink-800" className="py-8 sm:px-8">
           <div className="max-w-lg">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
               <IconLayoutDashboard className="h-6 w-6" stroke={1.75} />
             </span>
-            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h3 className="mt-4 text-left text-balance text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white">
               Web Applications & Dashboards
-            </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
+            </h3>
+            <p className="mt-3 text-left text-base/6 text-neutral-200">
               We build modern web apps, ecommerce stores, and dashboards that combine beautiful design with powerful features to drive business success.
             </p>
           </div>
         </WobbleCard>
 
-        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+        <WobbleCard containerClassName="col-span-1" className="py-8 sm:px-8">
           <div className="max-w-lg">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
               <IconRobot className="h-6 w-6" stroke={1.75} />
             </span>
-            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h3 className="mt-4 text-left text-balance text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white">
               Agentic AI Solutions
-            </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
+            </h3>
+            <p className="mt-3 text-left text-base/6 text-neutral-200">
               AI agents that take on multi-step work for you. They read emails and documents, make decisions, and update your tools, handing off to your team when a human is needed.
             </p>
           </div>
         </WobbleCard>
 
-        <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-yellow-900">
+        <WobbleCard containerClassName="col-span-1 bg-yellow-900" className="py-8 sm:px-8">
           <div className="max-w-lg">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
               <IconMessageChatbot className="h-6 w-6" stroke={1.75} />
             </span>
-            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h3 className="mt-4 text-left text-balance text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white">
               Chatbots
-            </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
+            </h3>
+            <p className="mt-3 text-left text-base/6 text-neutral-200">
               Trained on your website, FAQs and documents, a chatbot answers customer questions 24/7, captures leads, and passes complex conversations to your team.
             </p>
           </div>
         </WobbleCard>
 
-        <WobbleCard containerClassName="col-span-1 lg:col-span-2 min-h-[300px] bg-blue-900">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-blue-900" className="py-8 sm:px-8">
           <div className="max-w-lg">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 text-white">
+            <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/20">
               <IconMicrophone className="h-6 w-6" stroke={1.75} />
             </span>
-            <h2 className="mt-5 text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
+            <h3 className="mt-4 text-left text-balance text-2xl md:text-3xl font-semibold tracking-[-0.015em] text-white">
               Voice Agents
-            </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
+            </h3>
+            <p className="mt-3 text-left text-base/6 text-neutral-200">
               AI phone agents that answer calls in a natural voice, any time of day. They handle questions, book appointments and take orders, then log every call and send a summary to your team.
             </p>
           </div>
         </WobbleCard>
+        </div>
       </div>
 
 
       {/* projects */}
-      <div className="sm:px-4 md:px-4 pt-10 lg:px-10 lg:pt-2 " data-aos="fade-up">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-center text-4xl mb-8 font-bold text-gray-200">Projects</h1>
+      <div className="pt-24" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto px-5">
+          <SectionHeading title="Projects" />
           <CustomersList />
         </div>
       </div>
 
       {/* Contact Us */}
-      <div id="contact-us" className="grid grid-cols-1 p-5 lg:grid-cols-4 gap-4 mx-auto max-w-7xl" data-aos="fade-up">
-        <h1 className="text-center text-4xl mb-6 font-bold text-gray-200 lg:col-span-4">Contact Us</h1>
-        <div className="border border-gray-700 hover:border-gray-600 rounded-2xl p-4 md:p-6 shadow-input transition">
-          <a href="tel:2046983137" className="flex items-center gap-3 group w-fit">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <h3 className="font-bold text-lg text-neutral-200 group-hover:text-white">
-                Call Us
-              </h3>
-          </a>
-          <span className="text-sm mt-2 block select-text cursor-text">
-            (204) 698-3137
-          </span>
+      <div id="contact-us" className="grid grid-cols-1 px-5 pt-4 pb-16 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto max-w-7xl w-full" data-aos="fade-up">
+        <div className="sm:col-span-2 lg:col-span-4"><SectionHeading title="Contact Us" /></div>
+
+        <div className={contactCard}>
+          <div className={contactIcon}><IconPhone size={20} stroke={1.75} /></div>
+          <a href="tel:2046983137" className="mt-4 block font-semibold text-gray-100 hover:text-white w-fit">Call Us</a>
+          <span className="mt-1 block text-sm text-gray-400 select-text cursor-text">(204) 698-3137</span>
         </div>
 
-        <div className="border border-gray-700 hover:border-gray-600 rounded-2xl p-4 md:p-6 shadow-input transition">
-          <a href={evaluationMailto} className="flex items-center gap-3 group w-fit">
-              <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <h3 className="font-bold text-lg text-neutral-200 group-hover:text-white">
-                Email Us
-              </h3>
-          </a>
-          <div className="mt-2 flex items-center gap-2">
-            <span className="text-sm select-all cursor-text">hadi@primeinnovationshq.com</span>
-            <CopyButton text="hadi@primeinnovationshq.com" />
-          </div>
+        <div className={`${contactCard} relative`}>
+          <div className="absolute top-5 right-5 md:top-6 md:right-6"><CopyButton text="hadi@primeinnovationshq.com" /></div>
+          <div className={contactIcon}><IconMail size={20} stroke={1.75} /></div>
+          <a href={evaluationMailto} className="mt-4 block font-semibold text-gray-100 hover:text-white w-fit">Email Us</a>
+          <span className="mt-1 block text-sm text-gray-400 select-all cursor-text">hadi@primeinnovationshq.com</span>
         </div>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input border border-gray-700 transition-transform cursor-pointer">
-          <div className="flex items-center gap-3">
-            <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <h3 className="font-bold text-lg text-neutral-200">
-              Winnipeg Office
-            </h3>
-          </div>
-          <p className="text-sm mt-2 text-neutral-300">
+        <div className={contactCard}>
+          <div className={contactIcon}><IconMapPin size={20} stroke={1.75} /></div>
+          <h3 className="mt-4 font-semibold text-gray-100">Winnipeg Office</h3>
+          <p className="mt-1 text-sm text-gray-400">
             110 Innovation Drive<br />
             Winnipeg, MB R3T 2M1
           </p>
         </div>
 
-        <div className="rounded-2xl p-4 md:p-6 shadow-input border border-gray-700 transition-transform cursor-pointer">
-          <div className="flex items-center gap-3">
-            <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <h3 className="font-bold text-lg text-neutral-200">
-              Los Angeles Office (Coming Soon)
-            </h3>
-          </div>
-          <p className="text-sm mt-2 text-neutral-300">
+        <div className={contactCard}>
+          <div className={contactIcon}><IconMapPin size={20} stroke={1.75} /></div>
+          <h3 className="mt-4 font-semibold text-gray-100 flex items-center gap-2">
+            Los Angeles Office
+            <span className="rounded-full border border-white/15 px-2 py-0.5 text-[11px] font-normal text-gray-400">Coming soon</span>
+          </h3>
+          <p className="mt-1 text-sm text-gray-400">
             456 Hollywood Blvd<br />
             Los Angeles, CA 90028
           </p>
